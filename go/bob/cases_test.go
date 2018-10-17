@@ -124,11 +124,11 @@ var testCases = []struct {
 		"Okay if like my  spacebar  quite a bit?   ",
 		"Sure.",
 	},
-	// {
-	// 	"other whitespace",
-	// 	"\n\r \t",
-	// 	"Fine. Be that way!",
-	// },
+	{
+		"other whitespace",
+		"\n\r \t",
+		"Fine. Be that way!",
+	},
 	{
 		"non-question ending with whitespace",
 		"This is a statement ending with whitespace      ",
