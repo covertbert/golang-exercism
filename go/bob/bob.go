@@ -14,13 +14,10 @@ func Hey(remark string) string {
 	var response string
 
 	switch {
-	case endsWith(remark, "?"):
-		switch {
-		case isAllUpperCase(remark):
-			response = "Calm down, I know what I'm doing!"
-		default:
-			response = "Sure."
-		}
+	case endsWith(remark, "?") && isAllUpperCase(remark):
+		response = "Calm down, I know what I'm doing!"
+	case endsWith(remark, "?") && !isAllUpperCase(remark):
+		response = "Sure."
 	case isAllUpperCase(remark):
 		response = "Whoa, chill out!"
 	case isBlank(remark):
@@ -46,6 +43,7 @@ func isAllUpperCase(remark string) bool {
 	if s.ToUpper(remark) == s.ToLower(remark) {
 		return false
 	}
+
 	return s.ToUpper(remark) == remark
 }
 
