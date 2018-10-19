@@ -10,10 +10,6 @@ var scoreMap = map[string]int{"A": 1, "B": 3, "C": 3, "D": 2, "E": 1, "F": 4, "G
 func Score(input string) int {
 	score := 0
 
-	if len(input) == 0 {
-		return score
-	}
-
 	splitInput := strings.Split(strings.ToUpper(input), "")
 
 	for _, inputLetter := range splitInput {
